@@ -1,21 +1,198 @@
 /** Add css rules here for your application. */
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    background:#F4EEE2;
+}
+
+label {
+    margin-bottom: 0;
+}
+
 .workspace > div:last-child {
     overflow: scroll !important;
 }
+
 .person-view > header {
     width: 80%;
+    color: #000;
     max-width: 1400px;
     margin: 30px auto;
-    background: #f4f4f4;
-    
+    background-image: url('https://tinyurl.com/y95r62py');
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 30px;
+    box-shadow: 5px 5px 20px rgba(103, 105, 110, 0.5);
+    position: relative;
+    z-index: 1;
 }
+
+.person-view > header::after {
+    content: '';
+    background-color: rgba(238, 208, 105, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .filter-toolbar {
     display: flex;
     flex-wrap: wrap;
 }
-.apply-filters {
-    margin: 0 auto;
+
+.filter-toolbar > div {
+    width: 33.33%;
+    text-align: center;
+}
+
+.filter-toolbar > div > select,
+.filter-toolbar > div > input {
     display: block;
+    margin: 0 auto 10px auto;
+    width: 80%;
+    border: 1px solid #354751;
+    padding: 0 5px;
+}
+
+.apply-filters {
+    font-weight: 300;
+    margin: 20px auto 0 auto;
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(53, 71, 81, 1);
+    color: #fff;
+    border: 1px solid #EED069;
+}
+
+.apply-filters:hover {
+    text-shadow: 1px 0 0  currentColor;
+}
+
+.controls {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+footer .fetch,
+.controls button {
+    font-weight: 300;
+    margin: 0 10px 5px 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    background-color: rgba(53, 71, 81, 1);
+    color: #fff;
+    border: 1px solid #EED069;
+}
+
+footer .fetch {
+    margin: 10px auto 0 auto;
+    display: block;
+}
+
+footer .fetch:hover,
+.controls button:hover {
+    text-shadow: 1px 0 0  currentColor;
+}
+
+nav.controls {
+    padding-top: 20px;
+    padding-bottom: 0;
+    border-top: 1px solid rgba(53, 71, 81, 0.4);
+}
+
+.grid-view > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid-view .person-cell {
+    width: 30vw;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 10px;
+}
+
+.grid-view .person-cell .caption {
+    padding-top: 5px;
+}
+
+.grid-view .person-cell .caption > span::after {
+    content: ' ';
+}
+
+.grid-view .person-cell .caption > span:first-child::after {
+    content: '. ';
+}
+
+.grid-view > div > div:nth-child(odd) {
+    background-color: #738D9C;
+}
+
+.grid-view .person-cell aside > div,
+.grid-view .person-cell .work > div,
+.grid-view .person-cell .education > div,
+.grid-view .person-cell .personal-info > div {
+    border-top: 1px solid rgba(53, 71, 81, 0.4);
+    padding-top: 5px;
+}
+
+.grid-view .person-cell aside > div:after,
+.grid-view .person-cell .work > div:after,
+.grid-view .person-cell .education > div:after,
+.grid-view .person-cell .personal-info > div:after {
+    content: attr(title);
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.1;
+    padding-bottom: 5px;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 990px) {
+    .filter-toolbar > div {
+        width: 50%;
+    }
+
+    .filter-toolbar .ein {
+        width: 100%;
+    }
+
+    .filter-toolbar .ein input {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .person-view > header {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .filter-toolbar > div {
+        width: 100%;
+    }
+
+    .filter-toolbar .ein input {
+        width: 80%;
+    }
+
+    .grid-view > div {
+        display: block;
+    }
+
+    .grid-view .person-cell {
+        width: 100%;
+    }
 
 }

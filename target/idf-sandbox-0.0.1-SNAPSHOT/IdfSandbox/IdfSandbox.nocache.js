@@ -64,6 +64,4 @@
       $wnd.attachEvent('onload', injectScriptTag);
     }
   }
-  
-
 })(window, document);
