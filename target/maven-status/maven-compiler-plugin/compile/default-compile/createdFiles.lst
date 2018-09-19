@@ -1,0 +1,13 @@
+com\candorgrc\idfusion\sandbox\client\datapresentation\style\CellListStyle.class
+com\candorgrc\idfusion\sandbox\client\presenter\PersonPresenter.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\AsyncCellList.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\HasDataUtils.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\PersonCellList$1.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\style\CellListResources.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\cell\PersonCell.class
+com\candorgrc\idfusion\sandbox\client\model\PersonJSO.class
+com\candorgrc\idfusion\sandbox\client\data\DataManager.class
+com\candorgrc\idfusion\sandbox\client\presenter\Presenter.class
+com\candorgrc\idfusion\sandbox\client\jsinterop\JSON.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\cell\PersonCell$Action.class
+com\candorgrc\idfusion\sandbox\client\datapresentation\cell\PersonCell$Template.class

@@ -1,1 +1,21 @@
 /** Add css rules here for your application. */
+.workspace > div:last-child {
+    overflow: scroll !important;
+}
+.person-view > header {
+    width: 80%;
+    max-width: 1400px;
+    margin: 30px auto;
+    background: #f4f4f4;
+    
+    padding: 30px;
+}
+.filter-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.apply-filters {
+    margin: 0 auto;
+    display: block;
+
+}
