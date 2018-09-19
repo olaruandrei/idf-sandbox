@@ -5,7 +5,6 @@ $( document ).ready(function() {
         if(check==="grid-view"){
             showTable();
             check=$('.person-view section > div')[0].className;
-            
         }
         else {
             showGrid();
@@ -13,15 +12,24 @@ $( document ).ready(function() {
         }
     });
     
+    $(document).on('click', '.fetch', function(event) { 
+        if( check === "table-view"){
+            event.preventDefault(); 
+            check = "grid-view";
+            $('.toggle-view-mode').click(); 
+            check = "grid-view";
+            $('.toggle-view-mode').click(); 
+            check=$('.person-view section > div')[0].className;
+        }
+    });
     
-   
+//    Create Table
     function showTable(){
         $('.person-view > section > div > table').remove();
-        
-
+        // Get all the person cells currently injected into data var
         var data = $('.person-cell');
         var tbl = document.createElement('table');
-        
+        // Create table header
         var thd = document.createElement('thead');
             {
                 var trhead =  document.createElement('tr');
@@ -71,7 +79,7 @@ $( document ).ready(function() {
                 }
                 thd.appendChild(trhead);
             }
-
+        // Create table body
         var tbdy = document.createElement('tbody');
             for(let i=0;i<data.length;i++){
                 var tr = document.createElement('tr');
@@ -160,7 +168,7 @@ $( document ).ready(function() {
         tbl.appendChild(tbdy);
        
         $('.person-view > section > div').append(tbl);
-        $('.person-view > section > div > table').addClass('table').addClass('table-striped').addClass('table-sm');
+        $('.person-view > section > div > table').addClass('table').addClass('table-striped').addClass('table-sm').addClass('mx-4');
         hideAll();
     }
 
